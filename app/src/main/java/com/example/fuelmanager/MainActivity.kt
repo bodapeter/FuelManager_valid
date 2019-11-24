@@ -39,13 +39,8 @@ class MainActivity : AppCompatActivity() {
 
         Refreshdata()
 
-
-        //add button
-        //val addButton: Button = findViewById(R.id.btn_add)
         btn_add.setOnClickListener()
         {
-
-
             val refuel = Refuel(
                 edit_Date.text.toString(),
                 edit_KilometerClock.text.toString().toDouble(),
@@ -57,14 +52,12 @@ class MainActivity : AppCompatActivity() {
             Refreshdata()
 
 
-            //findViewById<View>(R.id.addNewRefuelLayout).visibility = View.INVISIBLE
-            //findViewById<View>(R.id.showAllRefuel).visibility = View.VISIBLE
+            findViewById<View>(R.id.addNewRefuelLayout).visibility = View.INVISIBLE
+            findViewById<View>(R.id.showAllRefuel).visibility = View.VISIBLE
         }
 
         //delete button
-        val deleteButton: Button = findViewById(R.id.btn_Delete)
-
-        deleteButton.setOnClickListener {
+        btn_Delete.setOnClickListener {
             val refuel = Refuel(
                 showlayout_edit_date.text.toString(),
                 showlayout_edit_kilometer.text.toString().toDouble(),
@@ -78,9 +71,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         //update button
-        val updateButton: Button = findViewById(R.id.btn_Update)
-
-        updateButton.setOnClickListener {
+        btn_Update.setOnClickListener {
             val refuel = Refuel(
                 showlayout_edit_date.text.toString(),
                 showlayout_edit_kilometer.text.toString().toDouble(),

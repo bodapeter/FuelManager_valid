@@ -5,65 +5,124 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <TextView
         android:id="@+id/txt_row_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
         android:text=""
-        android:textSize="40dp"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <LinearLayout
+        android:layout_marginTop="10dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="DATE TIME: " />
+
+        <TextView
             android:id="@+id/txt_row_date_now"
-            android:layout_width="10dp"
-            android:layout_height="54dp"
-            android:layout_marginLeft="10sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Date" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:text="KILOMETERS:" />
 
         <TextView
             android:id="@+id/txt_row_kilometers"
             android:text="0"
-            android:layout_marginLeft="10sp"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="162dp"
+            android:layout_height="wrap_content"
+            android:text="KILOMETERS 2 REFUEL:" />
 
         <TextView
             android:id="@+id/txt_row_between2refuel"
             android:text="0"
-            android:layout_marginLeft="10sp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="FUEL QUANTITY: " />
 
         <TextView
             android:id="@+id/txt_row_fuel_quantity"
             android:text="0"
-            android:layout_marginLeft="10sp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:text="PRICE OF REFUEL: " />
 
         <TextView
             android:id="@+id/txt_price_of_refuel"
             android:text="0"
-            android:layout_marginLeft="10sp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100sp"/>
 
 
-        
+
     </LinearLayout>
 
-
-
 </LinearLayout>
+
+

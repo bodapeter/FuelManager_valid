@@ -13,6 +13,9 @@
     <string name="et_fuelQuanytity">FUEL QUANTITY</string>
     <string name="et_price">PRICE OF THE FUEL</string>
 
-    <string name="tx_adtress">REFUEL MANAGER</string>
+    <string name="txt_row_fogyasztas">CONSUMPTION:</string>
+
+
+    <string name="tx_adtress">REFUEL MANAGER:</string>
 
 </resources>

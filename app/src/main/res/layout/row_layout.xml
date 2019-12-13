@@ -2,21 +2,22 @@
 <LinearLayout
     android:id="@+id/row_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
 
     <TextView
         android:id="@+id/txt_row_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="0"
         android:textSize="20dp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_marginTop="10dp"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -50,7 +51,7 @@
         <TextView
             android:id="@+id/txt_row_kilometers"
             android:text="0"
-            android:layout_width="0dp"
+            android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
 
@@ -73,8 +74,7 @@
             android:id="@+id/txt_row_between2refuel"
             android:text="0"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100sp"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -95,16 +95,15 @@
             android:id="@+id/txt_row_fuel_quantity"
             android:text="0"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100sp"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <TextView
@@ -114,11 +113,29 @@
 
         <TextView
             android:id="@+id/txt_price_of_refuel"
-            android:text="0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100sp"/>
+            android:text="0" />
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_row_fogyasztas"/>
+
+        <TextView
+            android:id="@+id/txt_consumption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0" />
 
 
     </LinearLayout>

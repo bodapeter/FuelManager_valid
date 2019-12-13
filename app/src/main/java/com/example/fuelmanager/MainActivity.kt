@@ -19,18 +19,18 @@ import java.lang.Exception
 
 import java.time.LocalDateTime
 
-
-
-
 class MainActivity : AppCompatActivity() {
+
+
 
     val databaseHandler : DBHelper = DBHelper(this)
 
     lateinit var lstRefuel:List<Refuel>
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        lstRefuel=databaseHandler.getAllRefuel()
+        lstRefuel = databaseHandler.getAllRefuel()
         setContentView(R.layout.activity_main)
 
         //first visitibility
@@ -80,16 +80,16 @@ class MainActivity : AppCompatActivity() {
                 showlayout_edit_pricerefuel.text.toString().toDouble(),
                 Integer.parseInt(showlayout_Id.text.toString())
             )
-            showToast( databaseHandler.updateRefuel(refuel).toString())
+            showToast(databaseHandler.updateRefuel(refuel).toString())
             Refreshdata()
         }
 
         //Show all refuel
-        val showAllRefuelButton:Button = findViewById(R.id.btn_showAll)
+        val showAllRefuelButton: Button = findViewById(R.id.btn_showAll)
         showAllRefuelButton.setOnClickListener()
         {
             val refuels = databaseHandler.getAllRefuel()
-            val allRefuelListView:ListView = findViewById(R.id.listViewShowAllRefuel)
+            val allRefuelListView: ListView = findViewById(R.id.listViewShowAllRefuel)
             //allRefuelListView.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,refuels)
             findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
 
@@ -98,40 +98,45 @@ class MainActivity : AppCompatActivity() {
 
 
         //skip button
-        val skipnewrefuellayout:Button = findViewById(R.id.btn_new_refuel_layout)
+        val skipnewrefuellayout: Button = findViewById(R.id.btn_new_refuel_layout)
         skipnewrefuellayout.setOnClickListener()
         {
             skipTheAddNewRefuelLayout()
         }
 
-        val createDB:Button = findViewById(R.id.btn_createdb)
-        createDB.setOnClickListener()
-        {
-            databaseHandler.createTable("Refuels")
-        }
 
 
 
         //back button from show all layout
-        val backToMain:Button = findViewById(R.id.btn_backToMain)
+        val backToMain: Button = findViewById(R.id.btn_backToMain)
         backToMain.setOnClickListener()
         {
             visibilityInit()
         }
 
         //back button from add layout
-        val backToMainFromShowLayout:Button = findViewById(R.id.btn_backToMainFromTheAddLayout)
+        val backToMainFromShowLayout: Button = findViewById(R.id.btn_backToMainFromTheAddLayout)
         backToMainFromShowLayout.setOnClickListener()
         {
             visibilityInit()
         }
 
         //next to new refuel layout button
-       fun skipTheAddNewRefuelLayout()
-        {
+        fun skipTheAddNewRefuelLayout() {
             findViewById<View>(R.id.addNewRefuelLayout).visibility = View.VISIBLE
             findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
         }
+
+        fun getAtlag(id:Int) {
+            var refuel = databaseHandler.getRefuel(id)
+
+            findViewById<TextView>(R.id.txt_consumption).text = refuel.getavarageConsuption().toString()
+
+            /*for (refuel in refuels) {
+                findViewById<TextView>(R.id.txt_consumption).text = refuel.getavarageConsuption().toString()
+            }*/
+        }
+
 
     }
 
@@ -142,15 +147,6 @@ class MainActivity : AppCompatActivity() {
         listViewShowAllRefuel.adapter = adapter
     }
 
-    fun dropTable(view:View)
-    {
-        databaseHandler.dropTable("Refuels")
-    }
-
-    fun createTable(view:View)
-    {
-        databaseHandler.createTable("Refuels")
-    }
 
      fun skipTheAddNewRefuelLayout() {
         findViewById<View>(R.id.addNewRefuelLayout).visibility = View.VISIBLE
@@ -179,4 +175,8 @@ class MainActivity : AppCompatActivity() {
     {
         Toast.makeText(this,message,Toast.LENGTH_LONG).show()
     }
+
+
+
+
 }

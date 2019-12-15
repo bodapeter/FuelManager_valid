@@ -36,6 +36,7 @@ class RefuelAdapter(private val activity:Activity,
         rowView.txt_row_between2refuel.text = refuelList[position].getKilometerBetweenRefuel().toString()
         rowView.txt_row_fuel_quantity.text = refuelList[position].getFuelQuantity().toString()
         rowView.txt_price_of_refuel.text = refuelList[position].getPriceOfRefuel().toString()
+        rowView.txt_consumption.text = refuelList[position].getavarageConsuption().toString()
 
         rowView.setOnClickListener{
             textViewRefuelID.setText(rowView.txt_row_id .text.toString())
@@ -59,5 +60,7 @@ class RefuelAdapter(private val activity:Activity,
     override fun getItem(position: Int): Any {
         return refuelList[position]
     }
+
+
 }
 

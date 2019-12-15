@@ -102,8 +102,10 @@
         android:layout_marginTop="30dp"
         android:id="@+id/listViewShowAllRefuel"
         android:layout_width="match_parent"
-        android:layout_height="382dp"
+        android:layout_height="wrap_content"
         android:choiceMode="singleChoice">
 
     </ListView>
+
+
 </LinearLayout>

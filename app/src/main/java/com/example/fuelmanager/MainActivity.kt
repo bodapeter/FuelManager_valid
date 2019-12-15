@@ -90,6 +90,9 @@ class MainActivity : AppCompatActivity() {
         {
             val refuels = databaseHandler.getAllRefuel()
             val allRefuelListView: ListView = findViewById(R.id.listViewShowAllRefuel)
+
+
+
             //allRefuelListView.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,refuels)
             findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
 
@@ -127,15 +130,7 @@ class MainActivity : AppCompatActivity() {
             findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
         }
 
-        fun getAtlag(id:Int) {
-            var refuel = databaseHandler.getRefuel(id)
 
-            findViewById<TextView>(R.id.txt_consumption).text = refuel.getavarageConsuption().toString()
-
-            /*for (refuel in refuels) {
-                findViewById<TextView>(R.id.txt_consumption).text = refuel.getavarageConsuption().toString()
-            }*/
-        }
 
 
     }

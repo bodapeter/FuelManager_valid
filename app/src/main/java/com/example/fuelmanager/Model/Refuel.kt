@@ -8,10 +8,11 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.math.round
 import kotlin.math.roundToInt
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 
 class Refuel(
-
     var dateForRefuelling:String,
     var kiloMeter:Double,
     var kilometerbetweenRefuel:Double,
@@ -52,9 +53,11 @@ class Refuel(
     }
 
 
-    fun getavarageConsuption():Double
+    fun getavarageConsuption(): BigDecimal?
     {
-        return round( fuelQuantity/kilometerbetweenRefuel*100)
+        var calculate = fuelQuantity/kilometerbetweenRefuel*100
+        var decimal = BigDecimal(calculate).setScale(2,RoundingMode.HALF_EVEN)
+       return decimal
     }
 
 

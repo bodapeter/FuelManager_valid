@@ -98,8 +98,8 @@ class DBHelper(context: Context):
 
 
                     refuel.Id = Integer.parseInt(cursor.getString(cursor.getColumnIndex(REFUELID)))
-                    refuel.dateForRefuelling = cursor.getString(cursor.getColumnIndex(DATETIME))
-                    refuel.kiloMeter = cursor.getDouble(cursor.getColumnIndex(KILOMETER))
+                refuel.dateForRefuelling = cursor.getString(cursor.getColumnIndex(DATETIME))
+                refuel.kiloMeter = cursor.getDouble(cursor.getColumnIndex(KILOMETER))
                     refuel.kilometerbetweenRefuel = cursor.getDouble(
                         cursor.getColumnIndex(
                             KILOMETERBETWEENREFUEL))
@@ -130,7 +130,7 @@ class DBHelper(context: Context):
             {
 
                 refuel.Id = Integer.parseInt(cursor.getString(cursor.getColumnIndex(REFUELID)))
-                refuel.dateForRefuelling = cursor.getString( cursor.getColumnIndex(DATETIME))
+                refuel.dateForRefuelling = cursor.getString(cursor.getColumnIndex(DATETIME))
                 refuel.kiloMeter = cursor.getDouble(cursor.getColumnIndex(KILOMETER))
                 refuel.kilometerbetweenRefuel = cursor.getDouble(
                     cursor.getColumnIndex(

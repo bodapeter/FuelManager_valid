@@ -119,8 +119,6 @@ class MainActivity : AppCompatActivity() {
             databaseHandler.createTable("Refuels")
         }
 
-
-
         //back button from show all layout
         val backToMain:Button = findViewById(R.id.btn_backToMain)
         backToMain.setOnClickListener()
